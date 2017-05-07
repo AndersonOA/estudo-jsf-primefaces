@@ -16,33 +16,6 @@
 
 		<!-- jUnit -->
 		<junit.version>4.12</junit.version>
-
-		<!-- MySQL -->
-		<mysql.connector.version>5.1.40</mysql.connector.version>
-
-		<!-- Commons Lang -->
-		<org.apache.commons.lang.version>3.5</org.apache.commons.lang.version>
-
-		<!-- JSF -->
-		<com.sun.faces.jsf.version>2.2.14</com.sun.faces.jsf.version>
-
-		<!-- PrimeFaces -->
-		<org.primefaces.version>6.1</org.primefaces.version>
-
-		<!-- CDI API -->
-		<javax.enterprise.cdi.api.version>1.2</javax.enterprise.cdi.api.version>
-
-		<!-- Weld -->
-		<org.jboss.weld.servlet.version>2.4.3.Final</org.jboss.weld.servlet.version>
-
-		<!-- Hibernate -->
-		<org.hibernate.version>5.2.10.Final</org.hibernate.version>
-
-		<!-- jBoos -->
-		<org.jboss.jandex.version>2.0.3.Final</org.jboss.jandex.version>
-
-		<!-- jDom -->
-		<jdom.version>1.1</jdom.version>
 	</properties>
 
 	<developers>
@@ -88,28 +61,28 @@
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>${com.sun.faces.jsf.version}</version>
+			<version>2.2.13</version>
 		</dependency>
 
 		<!-- JSF -->
 		<dependency>
 			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-impl</artifactId>
-			<version>${com.sun.faces.jsf.version}</version>
+			<version>2.2.13</version>
 		</dependency>
 
 		<!-- PrimeFaces -->
 		<dependency>
 			<groupId>org.primefaces</groupId>
 			<artifactId>primefaces</artifactId>
-			<version>${org.primefaces.version}</version>
+			<version>5.3</version>
 		</dependency>
 
 		<!-- CDI -->
 		<dependency>
 			<groupId>javax.enterprise</groupId>
 			<artifactId>cdi-api</artifactId>
-			<version>${javax.enterprise.cdi.api.version}</version>
+			<version>1.2</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -117,7 +90,7 @@
 		<dependency>
 			<groupId>org.jboss.weld.servlet</groupId>
 			<artifactId>weld-servlet</artifactId>
-			<version>${org.jboss.weld.servlet.version}</version>
+			<version>2.2.6.Final</version>
 			<scope>runtime</scope>
 		</dependency>
 
@@ -125,35 +98,35 @@
 		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
-			<version>${org.apache.commons.lang.version}</version>
+			<version>3.4</version>
 		</dependency>
 
 		<!-- PROVIDER JPA(HIBERNATE) -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>${org.hibernate.version}</version>
+			<version>4.3.0.Final</version>
 		</dependency>
 
 		<!-- DEPENDENCIA MYSQL -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>${mysql.connector.version}</version>
+			<version>5.1.37</version>
 		</dependency>
 
 		<!-- usado pelo Weld -->
 		<dependency>
 			<groupId>org.jboss</groupId>
 			<artifactId>jandex</artifactId>
-			<version>${org.jboss.jandex.version}</version>
+			<version>1.2.2.Final</version>
 		</dependency>
 
 		<!-- Manipulação de XML -->
 		<dependency>
 			<groupId>jdom</groupId>
 			<artifactId>jdom</artifactId>
-			<version>${jdom.version}</version>
+			<version>1.1</version>
 		</dependency>
 
 		<!-- jUnit -->
