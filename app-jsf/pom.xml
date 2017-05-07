@@ -1,0 +1,167 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>br.com.makersweb</groupId>
+	<artifactId>app-jsf</artifactId>
+	<packaging>war</packaging>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>app-jsf Maven Webapp</name>
+	<url>http://www.makersweb.com.br/</url>
+
+	<properties>
+		<!-- Config Default -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<java.compiler.version>1.8</java.compiler.version>
+		<maven.compiler.version>3.6.1</maven.compiler.version>
+
+		<!-- jUnit -->
+		<junit.version>4.12</junit.version>
+
+		<!-- MySQL -->
+		<mysql.connector.version>5.1.40</mysql.connector.version>
+
+		<!-- Commons Lang -->
+		<org.apache.commons.lang.version>3.5</org.apache.commons.lang.version>
+
+		<!-- JSF -->
+		<com.sun.faces.jsf.version>2.2.14</com.sun.faces.jsf.version>
+
+		<!-- PrimeFaces -->
+		<org.primefaces.version>6.1</org.primefaces.version>
+
+		<!-- CDI API -->
+		<javax.enterprise.cdi.api.version>1.2</javax.enterprise.cdi.api.version>
+
+		<!-- Weld -->
+		<org.jboss.weld.servlet.version>2.4.3.Final</org.jboss.weld.servlet.version>
+
+		<!-- Hibernate -->
+		<org.hibernate.version>5.2.10.Final</org.hibernate.version>
+
+		<!-- jBoos -->
+		<org.jboss.jandex.version>2.0.3.Final</org.jboss.jandex.version>
+
+		<!-- jDom -->
+		<jdom.version>1.1</jdom.version>
+	</properties>
+
+	<developers>
+		<developer>
+			<id>makersweb</id>
+			<name>Anderson O. Aristides</name>
+			<email>contato@makersweb.com.br</email>
+			<organization>Makersweb</organization>
+			<organizationUrl>http://www.makersweb.com.br</organizationUrl>
+			<roles>
+				<role>owner</role>
+				<role>developer</role>
+			</roles>
+			<timezone>-3</timezone>
+		</developer>
+	</developers>
+
+	<build>
+		<finalName>app-jsf</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<source>${java.compiler.version}</source>
+					<target>${java.compiler.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+		</plugins>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+			</resource>
+		</resources>
+	</build>
+
+	<dependencies>
+
+		<!-- JSF -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>${com.sun.faces.jsf.version}</version>
+		</dependency>
+
+		<!-- JSF -->
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>${com.sun.faces.jsf.version}</version>
+		</dependency>
+
+		<!-- PrimeFaces -->
+		<dependency>
+			<groupId>org.primefaces</groupId>
+			<artifactId>primefaces</artifactId>
+			<version>${org.primefaces.version}</version>
+		</dependency>
+
+		<!-- CDI -->
+		<dependency>
+			<groupId>javax.enterprise</groupId>
+			<artifactId>cdi-api</artifactId>
+			<version>${javax.enterprise.cdi.api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!--JBoss/Weld implementação de referência do CDI para Servlet Container(Exemplo:Tomcat) -->
+		<dependency>
+			<groupId>org.jboss.weld.servlet</groupId>
+			<artifactId>weld-servlet</artifactId>
+			<version>${org.jboss.weld.servlet.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Métodos uteis para manipulação de String, métodos e etc -->
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>${org.apache.commons.lang.version}</version>
+		</dependency>
+
+		<!-- PROVIDER JPA(HIBERNATE) -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${org.hibernate.version}</version>
+		</dependency>
+
+		<!-- DEPENDENCIA MYSQL -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql.connector.version}</version>
+		</dependency>
+
+		<!-- usado pelo Weld -->
+		<dependency>
+			<groupId>org.jboss</groupId>
+			<artifactId>jandex</artifactId>
+			<version>${org.jboss.jandex.version}</version>
+		</dependency>
+
+		<!-- Manipulação de XML -->
+		<dependency>
+			<groupId>jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<version>${jdom.version}</version>
+		</dependency>
+
+		<!-- jUnit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
